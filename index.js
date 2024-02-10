@@ -15,7 +15,7 @@ function chama_cliente(){
     const array_dados_clientes = JSON.parse(JSON.stringify(data));
     let encontrou_cliente = []
     array_dados_clientes.forEach(element => {
-        if(element.nome_cliente.toLowerCase().includes(nome_cliente.toLowerCase())){
+        if(element.nome_cliente.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(nome_cliente.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))){
             encontrou_cliente.push(element)
         }
     });    
