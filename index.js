@@ -21,6 +21,12 @@ function chama_cliente(){
     });    
     if(encontrou_cliente.length > 0){
         monta_tabela(encontrou_cliente)
+    }else{
+      Swal.fire({
+        title: "",
+        text: "Nenhum dado encontrado!",
+        icon: "error"
+      });
     }
   }
 
