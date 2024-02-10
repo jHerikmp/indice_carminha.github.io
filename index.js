@@ -33,7 +33,7 @@ function chama_cliente(){
   function monta_tabela(clientes){
     var table
     table = `
-    <table class="table table-striped" style="color: black">
+    <table class="table table-striped" style="color: black" id="example">
   <thead >
     <tr style="text-align:center;">
       <th scope="col">Nome</th>
@@ -60,4 +60,10 @@ function chama_cliente(){
     `
 
     document.getElementById("demo").innerHTML = table
+    new DataTable('#example', {      
+    columnDefs: [
+      // Center align both header and body content of columns 1, 2 & 3
+      { className: "dt-center", targets: [0,1,2] }
+   ]
+  });
   }
