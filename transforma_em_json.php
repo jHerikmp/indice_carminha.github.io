@@ -1,6 +1,7 @@
 <?php
 
-$string = trim(file_get_contents("texto_para_converter.txt"));
+$string = trim(file_get_contents("texto_caderno_fino.txt"));
+$string .= trim(file_get_contents("texto_caderno_grosso.txt"));
 
 $array_string = explode('|', $string);
 //echo "<pre>"; print_r($array_string);
