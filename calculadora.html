@@ -24,7 +24,7 @@
     <script src="https://cdn.datatables.net/1.13.10/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.10/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="index.js"></script>
+    <script src="calculadora.js"></script>
     
 
 </head>
@@ -58,7 +58,7 @@
                 <a class="nav-link" href="calculadora.html">
                     <i class="fas fa-fw fa-calculator"></i>
                     <span>Calculadora</span></a>
-            </li>              
+            </li>             
 
         </ul>
         <!-- End of Sidebar -->
@@ -92,7 +92,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Pesquisa</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Calculadora</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -100,24 +100,30 @@
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-6 mb-4">
-                            <form onsubmit="chama_cliente(); return false;" autocomplete="off">
+                            <form onsubmit="operacao_conta(); return false;" autocomplete="off">
                                 <div class="form-group">
-                                  <label for="exampleInputEmail1">Nome</label>
-                                  <input type="text" class="form-control" id="nome_cliente" aria-describedby="nome_cliente" 
-                                    placeholder="entre com o nome do cliente" required>                                  
+                                  <label for="exampleInputEmail1">Operação</label>
+                                  <input type="text" class="form-control" id="operacao" aria-describedby="operacao" 
+                                    placeholder="Entre com a Operação" inputmode="numeric" required>                                  
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button onclick="limpa(); return false;" class="btn btn-warning">Limpar</button>
                               </form>
                         </div>
                     </div>  
-                    
+                    <hr>
                     <div class="row">
-
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-12 col-md-6 mb-4">
-                            <div id="demo"></div>
+                            <div id="total" style="color: black;"></div>
                         </div>
-                    </div> 
+                    </div>
+                    <div class="row">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-12 col-md-6 mb-4">
+                            <div id="historico" style="color: black; line-height: 0.1"></div>
+                        </div>
+                    </div>  
 
                 </div>
                 <!-- /.container-fluid -->
@@ -177,15 +183,6 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
 </body>
-<script>
-    new DataTable('#example');
-</script>
+
 </html>
