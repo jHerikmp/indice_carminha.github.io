@@ -20,7 +20,7 @@ foreach($array_string as $key => $string){
 
 // Função de comparação para ordenar pelo índice "nome"
 function compararPorNome($a, $b) {
-    return strcmp($a['nome_cliente'], $b['nome_cliente']);
+    return strcmp(ucwords($a['nome_cliente']), ucwords($b['nome_cliente']));
 }
 
 // Usar usort para ordenar o array com base na função de comparação
