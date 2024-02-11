@@ -31,7 +31,7 @@ usort($array_organizada, 'compararPorNome');
 
 echo "["."<br>";
 foreach ($array_organizada as $organizado){    
-    echo '{"nome_cliente": "'.$organizado["nome_cliente"].'", "pagina_cliente": '.$organizado["pagina_cliente"].', "caderno_cliente": "'.$organizado["caderno_cliente"].'"},'."<br>";
+    echo '{"nome_cliente": "'.ucwords($organizado["nome_cliente"]).'", "pagina_cliente": '.$organizado["pagina_cliente"].', "caderno_cliente": "'.$organizado["caderno_cliente"].'"},'."<br>";
 }
 echo "]";
 
