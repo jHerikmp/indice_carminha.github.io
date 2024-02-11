@@ -15,31 +15,31 @@ if(soma.length >= 2){
   valor = Number(soma[0].replace(/,/g, '.')) + Number(soma[1].replace(/,/g, '.'))
   total += Number(valor)
   document.getElementById("historico").innerHTML += `
-  <h6>`+soma[0]+` + `+soma[1]+` = `+valor+`</h6><br>
+  <h6>`+soma[0]+` + `+soma[1]+` = R$ `+valor+`</h6><br>
   `
 }else if(subtracao.length >= 2){
   valor = Number(subtracao[0].replace(/,/g, '.')) - Number(subtracao[1].replace(/,/g, '.'))
   total += Number(valor)
   document.getElementById("historico").innerHTML += `
-  <h6>`+subtracao[0]+` - `+subtracao[1]+` = `+valor+`</h6><br>
+  <h6>`+subtracao[0]+` - `+subtracao[1]+` = R$ `+valor+`</h6><br>
   `
 }else if(divisao.length >= 2){
   valor = Number(divisao[0].replace(/,/g, '.')) / Number(divisao[1].replace(/,/g, '.'))
   total += Number(valor)
   document.getElementById("historico").innerHTML += `
-  <h6>`+divisao[0]+` / `+divisao[1]+` = `+valor+`</h6><br>
+  <h6>`+divisao[0]+` / `+divisao[1]+` = R$ `+valor+`</h6><br>
   `
 }else if(multiplicacao.length >= 2){
   valor = Number(multiplicacao[0].replace(/,/g, '.')) * Number(multiplicacao[1].replace(/,/g, '.'))
   total += Number(valor)
   document.getElementById("historico").innerHTML += `
-  <h6>`+multiplicacao[0]+` * `+multiplicacao[1]+` = `+valor+`</h6><br>
+  <h6>`+multiplicacao[0]+` * `+multiplicacao[1]+` = R$ `+valor+`</h6><br>
   `
 }else{
   valor = Number(input.replace(/,/g, '.'))
   total += Number(valor)
   document.getElementById("historico").innerHTML += `
-  <h6> +`+valor.toFixed(2)+`</h6><br>
+  <h6> + R$ `+valor.toFixed(2)+`</h6><br>
   `
 }
   /**/
