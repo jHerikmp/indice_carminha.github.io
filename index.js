@@ -1,7 +1,8 @@
 function chama_cliente(){
     document.getElementById("demo").innerHTML = ''
     nome_cliente = document.getElementById('nome_cliente').value
-    pesquisa_por_nome(nome_cliente)    
+    pesquisa_por_nome(nome_cliente) 
+    nome_cliente = document.getElementById('nome_cliente').value = ''   
   }
   
   async function consulta_dados_cliente(){
