@@ -43,7 +43,7 @@ if(soma.length >= 2){
 }
   /**/
   document.getElementById("total").innerHTML = `
-  <h1>Total da Operação: R$ `+total.toFixed(2)+`</h1><br><hr>  `
+  <h3>Total da Operação: R$ `+total.toFixed(2)+`</h3><br><hr>  `
 
   document.getElementById("operacao").value = ''
   
