@@ -18,9 +18,19 @@ foreach($array_string as $key => $string){
     }
 }
 
+// Função de comparação para ordenar pelo índice "nome"
+function compararPorNome($a, $b) {
+    return strcmp($a['nome_cliente'], $b['nome_cliente']);
+}
+
+// Usar usort para ordenar o array com base na função de comparação
+usort($array_organizada, 'compararPorNome');
+
+// Imprimir o array ordenado
+//echo "<pre>"; print_r($array_organizada); die();
+
 echo "["."<br>";
-foreach ($array_organizada as $organizado){
-    //echo '{"nome_cliente": "'+$organizado["nome_cliente"]+'", "pagina_cliente": '+$organizado["pagina_cliente"]+', "caderno_cliente": "'+$organizado["caderno_cliente"]+'"},'."<br>";
+foreach ($array_organizada as $organizado){    
     echo '{"nome_cliente": "'.$organizado["nome_cliente"].'", "pagina_cliente": '.$organizado["pagina_cliente"].', "caderno_cliente": "'.$organizado["caderno_cliente"].'"},'."<br>";
 }
 echo "]";
