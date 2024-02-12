@@ -1,6 +1,6 @@
 function chama_cliente(){
     document.getElementById("demo").innerHTML = ''
-    nome_cliente = document.getElementById('nome_cliente').value
+    nome_cliente = document.getElementById('nome_cliente').value.trim()
     pesquisa_por_nome(nome_cliente) 
     nome_cliente = document.getElementById('nome_cliente').value = ''   
   }
